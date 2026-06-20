@@ -11,6 +11,7 @@ services:
       OTEL_METRICS: http://grafana:4318/v1/metrics
       OTEL_TRACES: http://grafana:4318/v1/traces
       OTEL_LOGS: http://grafana:4318/v1/logs
+      DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
     networks:
       - app-network
     volumes:
@@ -26,7 +27,7 @@ services:
     image: redis:latest
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      test: [ "CMD-SHELL", "redis-cli ping | grep PONG" ]
       interval: 10s
       timeout: 3s
       retries: 5
@@ -41,7 +42,6 @@ services:
       - grafana-data:/data
     ports:
       - 3000
-
 
 networks:
   app-network:

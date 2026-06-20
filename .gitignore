@@ -37,3 +37,4 @@ out/
 .vscode/
 
 .devcontainer/devcontainer-lock.json
+.devcontainer/.env

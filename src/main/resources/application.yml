@@ -20,3 +20,5 @@ management:
       export:
         otlp:
           endpoint: ${OTEL_LOGS}
+discord:
+  bot-token: ${DISCORD_BOT_TOKEN}
