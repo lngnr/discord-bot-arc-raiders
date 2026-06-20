@@ -1,0 +1,48 @@
+volumes:
+  vscode-ssh-data:
+  grafana-data:
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      OTEL_METRICS: http://grafana:4318/v1/metrics
+      OTEL_TRACES: http://grafana:4318/v1/traces
+      OTEL_LOGS: http://grafana:4318/v1/logs
+    networks:
+      - app-network
+    volumes:
+      - ../..:/workspaces:cached
+      - vscode-ssh-data:/home/vscode/.ssh:cached
+    command: sleep infinity
+    depends_on:
+      redis:
+        condition: service_healthy
+      grafana:
+        condition: service_healthy
+  redis:
+    image: redis:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - app-network
+  grafana:
+    image: grafana/otel-lgtm:latest
+    restart: unless-stopped
+    networks:
+      - app-network
+    volumes:
+      - grafana-data:/data
+    ports:
+      - 3000
+
+
+networks:
+  app-network:
+    driver: bridge

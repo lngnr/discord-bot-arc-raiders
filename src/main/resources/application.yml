@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: arc-raiders-discord-bot
+  main:
+    web-application-type: none
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  otlp:
+    metrics:
+      export:
+        url: ${OTEL_METRICS}
+  opentelemetry:
+    tracing:
+      export:
+        otlp:
+          endpoint: ${OTEL_TRACES}
+    logging:
+      export:
+        otlp:
+          endpoint: ${OTEL_LOGS}
