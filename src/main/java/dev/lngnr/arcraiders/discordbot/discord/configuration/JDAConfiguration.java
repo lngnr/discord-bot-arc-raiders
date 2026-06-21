@@ -1,7 +1,6 @@
 package dev.lngnr.arcraiders.discordbot.discord.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,7 +17,6 @@ import net.dv8tion.jda.api.JDABuilder;
  */
 @Log4j2
 @Configuration
-@ConditionalOnMissingBean(type = "net.dv8tion.jda.api.JDA")
 public class JDAConfiguration {
 
     @Value("${discord.bot-token}")

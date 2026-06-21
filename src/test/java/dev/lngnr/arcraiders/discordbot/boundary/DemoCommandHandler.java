@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot;
+package dev.lngnr.arcraiders.discordbot.boundary;
 
 import dev.lngnr.arcraiders.discordbot.discord.boundary.CommandHandler;
 import dev.lngnr.arcraiders.discordbot.discord.boundary.CommandMapping;
