@@ -20,5 +20,9 @@ management:
       export:
         otlp:
           endpoint: ${OTEL_LOGS}
+logging:
+  level:
+    dev:
+      lngnr: DEBUG
 discord:
   bot-token: ${DISCORD_BOT_TOKEN}
