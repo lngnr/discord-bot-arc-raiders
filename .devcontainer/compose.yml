@@ -12,6 +12,7 @@ services:
       OTEL_TRACES: http://grafana:4318/v1/traces
       OTEL_LOGS: http://grafana:4318/v1/logs
       DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
+      REDIS_HOST: redis
     networks:
       - app-network
     volumes:

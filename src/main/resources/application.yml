@@ -3,6 +3,15 @@ spring:
     name: arc-raiders-discord-bot
   main:
     web-application-type: none
+  cache:
+    type: redis
+    redis:
+      time-to-live: 120000
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT:6379}
+      database: ${REDIS_DATABASE:-0}
 management:
   tracing:
     sampling:
@@ -26,3 +35,7 @@ logging:
       lngnr: DEBUG
 discord:
   bot-token: ${DISCORD_BOT_TOKEN}
+arc-raiders:
+  api:
+    url:
+      events: https://metaforge.app/api/arc-raiders/events-schedule

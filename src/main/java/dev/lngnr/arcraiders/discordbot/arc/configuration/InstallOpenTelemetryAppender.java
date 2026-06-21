@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.configuration;
+package dev.lngnr.arcraiders.discordbot.arc.configuration;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Configuration;

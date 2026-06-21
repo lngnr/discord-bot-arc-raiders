@@ -1,5 +1,6 @@
 package dev.lngnr.arcraiders.discordbot.discord.boundary;
 
+import lombok.NonNull;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 
 /**
@@ -12,6 +13,6 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
  */
 public interface CommandHandler {
 
-    void handle(SlashCommandInteractionEvent event);
+    void handle(@NonNull SlashCommandInteractionEvent event);
 
 }
