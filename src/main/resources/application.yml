@@ -9,10 +9,14 @@ spring:
       time-to-live: 120000
   data:
     redis:
+      client-type: lettuce
       host: ${REDIS_HOST}
       port: ${REDIS_PORT:6379}
       database: ${REDIS_DATABASE:-0}
 management:
+  observations:
+    annotations:
+      enabled: true
   tracing:
     sampling:
       probability: 1.0
