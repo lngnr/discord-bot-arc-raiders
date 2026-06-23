@@ -1,2 +1,6 @@
 discord:
   bot-token: not-set
+arc-raiders:
+  api:
+    url:
+      events:
