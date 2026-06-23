@@ -8,6 +8,11 @@ services:
       OTEL_LOGS: http://grafana:4318/v1/logs
       DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
       REDIS_HOST: redis
+    depends_on:
+      redis:
+        condition: service_healthy
+      grafana:
+        condition: service_healthy
     networks:
       - discord-bot-network
   redis:
