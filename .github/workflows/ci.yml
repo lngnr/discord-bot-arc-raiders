@@ -16,4 +16,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
       - name: Run tests
-        run: ./gradlew check
+        run: export DISCORD_BOT_TOKEN="" && ./gradlew check

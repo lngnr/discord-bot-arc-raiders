@@ -17,7 +17,7 @@ public class JDATestConfiguration {
 
     @Bean(name = "jdaTestBean")
     @Primary
-    public JDA jda() {
+    JDA jda() {
         final JDA jda = mock(JDA.class);
         final CommandListUpdateAction updateAction = mock(CommandListUpdateAction.class);
         when(updateAction.addCommands(any(SlashCommandData.class))).thenReturn(updateAction);
