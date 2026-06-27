@@ -28,7 +28,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.springframework.boot:spring-boot-starter-aspectj:4.1.0'
 	implementation 'net.dv8tion:JDA:6.4.2'
-    implementation 'io.opentelemetry.instrumentation:opentelemetry-logback-appender-1.0:2.28.1-alpha'
+    implementation 'io.opentelemetry.instrumentation:opentelemetry-logback-appender-1.0:2.29.0-alpha'
     implementation 'org.springframework.modulith:spring-modulith-starter-core'
 
 	compileOnly 'org.projectlombok:lombok'
