@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.discord.boundary;
+package dev.lngnr.arcraiders.discordbot.discord.internal;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,6 +11,8 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Component;
 
+import dev.lngnr.arcraiders.discordbot.discord.CommandHandler;
+import dev.lngnr.arcraiders.discordbot.discord.CommandMapping;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -29,7 +31,7 @@ import net.dv8tion.jda.api.interactions.commands.build.SlashCommandData;
 @Log4j2
 @Component
 @RequiredArgsConstructor
-public class CommandHandlerContext implements ApplicationListener<ContextRefreshedEvent> {
+class CommandHandlerContext implements ApplicationListener<ContextRefreshedEvent> {
 
     private final JDA jda;
     private final Map<String, CommandHandler> commands = new HashMap<>();

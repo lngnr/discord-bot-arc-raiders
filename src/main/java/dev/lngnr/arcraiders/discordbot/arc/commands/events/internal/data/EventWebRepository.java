@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.arc.data;
+package dev.lngnr.arcraiders.discordbot.arc.events.internal.data;
 
 import java.util.List;
 

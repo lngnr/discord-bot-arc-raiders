@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.discord;
+package dev.lngnr.arcraiders.discordbot.discord.internal;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -17,7 +17,7 @@ import net.dv8tion.jda.api.JDA;
 @Log4j2
 @Component
 @RequiredArgsConstructor
-public class DiscordBotWorker implements CommandLineRunner {
+class DiscordBotWorker implements CommandLineRunner {
 
     private final JDA jda;
 

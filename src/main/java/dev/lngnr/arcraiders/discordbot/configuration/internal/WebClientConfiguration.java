@@ -1,14 +1,14 @@
-package dev.lngnr.arcraiders.discordbot.arc.configuration;
+package dev.lngnr.arcraiders.discordbot.configuration.internal;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
-public class WebClientConfiguration {
+class WebClientConfiguration {
 
     @Bean
-    public WebClient webClient() {
+    WebClient webClient() {
         return WebClient.create();
     }
 

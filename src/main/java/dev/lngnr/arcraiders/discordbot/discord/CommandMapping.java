@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.discord.boundary;
+package dev.lngnr.arcraiders.discordbot.discord;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.discord.boundary;
+package dev.lngnr.arcraiders.discordbot.discord;
 
 import lombok.NonNull;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;

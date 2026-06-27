@@ -1,15 +1,15 @@
-package dev.lngnr.arcraiders.discordbot.arc.boundary;
+package dev.lngnr.arcraiders.discordbot.arc.events.internal.command;
 
 import java.awt.Color;
 import java.util.List;
 import java.util.Optional;
 
-import dev.lngnr.arcraiders.discordbot.arc.data.Event;
-import dev.lngnr.arcraiders.discordbot.arc.service.EventsService;
-import dev.lngnr.arcraiders.discordbot.discord.boundary.CommandHandler;
-import dev.lngnr.arcraiders.discordbot.discord.boundary.CommandMapping;
-import dev.lngnr.arcraiders.discordbot.discord.boundary.CommandMapping.CommandOptionSpecification;
-import dev.lngnr.arcraiders.discordbot.discord.boundary.DiscordTimestampFactory;
+import dev.lngnr.arcraiders.discordbot.arc.events.internal.data.Event;
+import dev.lngnr.arcraiders.discordbot.arc.events.internal.service.EventsService;
+import dev.lngnr.arcraiders.discordbot.discord.CommandHandler;
+import dev.lngnr.arcraiders.discordbot.discord.CommandMapping;
+import dev.lngnr.arcraiders.discordbot.discord.DiscordTimestampFactory;
+import dev.lngnr.arcraiders.discordbot.discord.CommandMapping.CommandOptionSpecification;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import net.dv8tion.jda.api.EmbedBuilder;

@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.discord.configuration;
+package dev.lngnr.arcraiders.discordbot.discord.internal.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -17,13 +17,13 @@ import net.dv8tion.jda.api.JDABuilder;
  */
 @Log4j2
 @Configuration
-public class JDAConfiguration {
+class JDAConfiguration {
 
     @Value("${discord.bot-token}")
     private String discordBotToken;
 
     @Bean
-    public JDA jda() {
+    JDA jda() {
         if (discordBotToken == null) {
             log.error("Dicord bot token is null");
             throw new IllegalArgumentException("Discord bot token is null");

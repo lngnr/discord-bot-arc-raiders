@@ -1,7 +1,7 @@
 package dev.lngnr.arcraiders.discordbot.boundary;
 
-import dev.lngnr.arcraiders.discordbot.discord.boundary.CommandHandler;
-import dev.lngnr.arcraiders.discordbot.discord.boundary.CommandMapping;
+import dev.lngnr.arcraiders.discordbot.discord.CommandHandler;
+import dev.lngnr.arcraiders.discordbot.discord.CommandMapping;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 
 @CommandMapping(name = "demo")

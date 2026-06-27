@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.arc.configuration;
+package dev.lngnr.arcraiders.discordbot.configuration.internal;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 
 @Configuration
 @RequiredArgsConstructor
-public class InstallOpenTelemetryAppender implements InitializingBean {
+class InstallOpenTelemetryAppender implements InitializingBean {
 
     private final OpenTelemetry openTelemetry;
 

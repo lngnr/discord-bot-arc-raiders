@@ -1,11 +1,11 @@
-package dev.lngnr.arcraiders.discordbot.arc.configuration;
+package dev.lngnr.arcraiders.discordbot.configuration.internal;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.support.ContextPropagatingTaskDecorator;
 
 @Configuration
-public class ContextPropagationConfiguration {
+class ContextPropagationConfiguration {
 
     @Bean
     ContextPropagatingTaskDecorator contextPropagatingTaskDecorator() {

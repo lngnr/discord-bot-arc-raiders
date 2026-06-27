@@ -1,4 +1,4 @@
-package dev.lngnr.arcraiders.discordbot.discord.boundary;
+package dev.lngnr.arcraiders.discordbot.discord.internal;
 
 import org.springframework.stereotype.Component;
 
@@ -23,7 +23,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 @Log4j2
 @Component
 @RequiredArgsConstructor
-public class CommandDispatcher extends ListenerAdapter {
+class CommandDispatcher extends ListenerAdapter {
 
     private final JDA jda;
     private final Tracer tracer;
