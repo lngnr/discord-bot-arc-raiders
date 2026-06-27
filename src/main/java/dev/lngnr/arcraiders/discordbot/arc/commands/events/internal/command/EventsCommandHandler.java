@@ -1,11 +1,11 @@
-package dev.lngnr.arcraiders.discordbot.arc.events.internal.command;
+package dev.lngnr.arcraiders.discordbot.arc.commands.events.internal.command;
 
 import java.awt.Color;
 import java.util.List;
 import java.util.Optional;
 
-import dev.lngnr.arcraiders.discordbot.arc.events.internal.data.Event;
-import dev.lngnr.arcraiders.discordbot.arc.events.internal.service.EventsService;
+import dev.lngnr.arcraiders.discordbot.arc.commands.events.internal.data.Event;
+import dev.lngnr.arcraiders.discordbot.arc.commands.events.internal.service.EventsService;
 import dev.lngnr.arcraiders.discordbot.discord.CommandHandler;
 import dev.lngnr.arcraiders.discordbot.discord.CommandMapping;
 import dev.lngnr.arcraiders.discordbot.discord.DiscordTimestampFactory;

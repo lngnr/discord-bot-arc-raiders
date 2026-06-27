@@ -1,12 +1,12 @@
-package dev.lngnr.arcraiders.discordbot.arc.events.internal.service;
+package dev.lngnr.arcraiders.discordbot.arc.commands.events.internal.service;
 
 import java.time.Instant;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import dev.lngnr.arcraiders.discordbot.arc.events.internal.data.Event;
-import dev.lngnr.arcraiders.discordbot.arc.events.internal.data.EventWebRepository;
+import dev.lngnr.arcraiders.discordbot.arc.commands.events.internal.data.Event;
+import dev.lngnr.arcraiders.discordbot.arc.commands.events.internal.data.EventWebRepository;
 import io.micrometer.tracing.annotation.NewSpan;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
