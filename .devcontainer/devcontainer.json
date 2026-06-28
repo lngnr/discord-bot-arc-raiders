@@ -31,7 +31,8 @@
                 "editor.codeActionsOnSave": {
                     "source.organizeImports": "explicit"
                 },
-                "files.autoSave": "onFocusChange"
+                "files.autoSave": "onFocusChange",
+                "java.compile.nullAnalysis.mode": "automatic"
             }
         }
     },

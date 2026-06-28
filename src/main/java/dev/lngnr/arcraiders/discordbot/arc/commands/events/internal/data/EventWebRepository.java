@@ -1,5 +1,6 @@
 package dev.lngnr.arcraiders.discordbot.arc.commands.events.internal.data;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -32,6 +33,11 @@ public class EventWebRepository {
                 .retrieve()
                 .bodyToMono(EventsResponse.class)
                 .block();
+
+        if (response == null || response.getData() == null) {
+            log.warn("No data provided.");
+            return Collections.emptyList();
+        }
 
         log.debug("Found {} events", response.getData().size());
 

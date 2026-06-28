@@ -1,5 +1,7 @@
 package dev.lngnr.arcraiders.discordbot.discord.internal;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Component;
 
 import io.micrometer.tracing.Span;
@@ -56,16 +58,21 @@ class CommandDispatcher extends ListenerAdapter {
                                     "Found handler {} for command \"{}\". Forwarding Event...",
                                     handler.getClass().getName(), event.getName());
 
-                            Span span = tracer.nextSpan(workerSpan).name(handler.getClass().getName()).start();
+                            Optional<Span> optionalSpan = Optional.ofNullable(tracer.nextSpan(workerSpan))
+                                    .map(s -> s.name(handler.getClass().getName()))
+                                    .map(s -> s.start());
 
-                            try (final SpanInScope _ = tracer.withSpan(span)) {
-                                handler.handle(event);
-                            } catch (Throwable e) {
-                                span.error(e);
-                                throw e;
-                            } finally {
-                                span.end();
-                            }
+                            optionalSpan.ifPresentOrElse(span -> {
+                                try (final SpanInScope _ = tracer.withSpan(span)) {
+                                    handler.handle(event);
+                                } catch (Throwable e) {
+                                    span.error(e);
+                                    throw e;
+                                } finally {
+                                    span.end();
+                                }
+                            }, () -> handler.handle(event));
+
                         }, () -> {
                             log.warn("Handler for command \"{}\" not found", event.getName());
                         });
